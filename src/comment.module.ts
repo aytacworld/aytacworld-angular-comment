@@ -4,6 +4,9 @@ import { InputComponent } from './input/input.component';
 @NgModule({
   declarations: [
     InputComponent
+  ],
+  exports: [
+    InputComponent
   ]
 })
 export class CommentModule { }

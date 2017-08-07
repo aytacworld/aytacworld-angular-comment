@@ -1,0 +1,29 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "ng serve"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^4.4.1",
+    "@angular/compiler": "^4.4.1",
+    "@angular/core": "^4.4.1",
+    "@angular/forms": "^4.4.1",
+    "@angular/platform-browser": "^4.4.1",
+    "@angular/platform-browser-dynamic": "^4.4.1",
+    "@angular/router": "^4.4.1",
+    "aytacworld-angular-comment": "file:../dist/aytacworld-angular-comment-0.0.1.tgz",
+    "core-js": "^2.5.1",
+    "rxjs": "^5.4.3",
+    "zone.js": "^0.8.17"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.4.2",
+    "@angular/compiler-cli": "^4.4.1",
+    "@types/node": "^8.0.28",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.2"
+  }
+}

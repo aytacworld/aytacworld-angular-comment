@@ -1,2 +1,4 @@
-<div class="">
+<div class="container">
+  <input #inp class="input" id="{{fieldId}}" type="text" required [value]="inputValue" (input)="inputChanged($event)"/>
+  <label class="label" [class.not-empty]="inp.value" for="{{fieldId}}">{{label}}</label>
 </div>

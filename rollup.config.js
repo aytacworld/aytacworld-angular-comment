@@ -6,9 +6,11 @@ export default {
   format: 'umd',
   globals: {
     '@angular/core': 'ng.core',
+    '@angular/forms': 'ng.forms',
+    '@angular/common': 'ng.common',
     'rxjs': 'rxjs'
   },
   moduleName: 'ng.simpleForms',
   sourceMap: false,
-  external: [ '@angular/core', 'rxjs' ]
+  external: ['@angular/core', '@angular/forms', '@angular/common', 'rxjs']
 }
