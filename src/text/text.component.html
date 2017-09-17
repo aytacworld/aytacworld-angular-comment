@@ -1,0 +1,4 @@
+<div class="container">
+  <textarea #inp class="input" id="{{fieldId}}" type="text" required [value]="inputValue" [rows]="rows" (input)="inputChanged($event)"></textarea>
+  <label class="label" [class.not-empty]="inp.value" for="{{fieldId}}">{{label}}</label>
+</div>

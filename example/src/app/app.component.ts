@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   <div [formGroup]="frm">
     <c-input [label]="'Hello'" formControlName="hello"></c-input>
     <c-input [label]="'Name'" [validStyle]="true" formControlName="name"></c-input>
-    <c-input [label]="'Desc'" formControlName="description"></c-input>
+    <c-text [label]="'Desc'" formControlName="description"></c-text>
   </div>
   `
 })

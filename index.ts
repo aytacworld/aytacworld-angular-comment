@@ -1,1 +1,1 @@
-export { InputComponent, CommentModule } from './src/index';
+export { InputComponent, CommentModule, TextComponent } from './src/index';

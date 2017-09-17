@@ -1,0 +1,83 @@
+$normal-dark: #4c6191;
+$valid-light: #69b655;
+$valid-dark: #30831a;
+$invalid-light: #d86865;
+$invalid-dark: #9b221f;
+
+:host {
+  &.ng-dirty.ng-valid.add-valid-style {
+    .label {
+      color: $valid-light;
+    }
+
+    .input {
+      border-color: $valid-light;
+
+      &:focus {
+        border-color: $valid-dark;
+
+        + .label {
+          color: $valid-dark;
+        }
+      }
+    }
+  }
+
+  &.ng-dirty.ng-invalid {
+    .label {
+      color: $invalid-light;
+    }
+
+    .input {
+      border-color: $invalid-light;
+
+      &:focus {
+        border-color: $invalid-dark;
+
+        + .label {
+          color: $invalid-dark;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  position: relative;
+  margin: 5px auto;
+  font-family: verdana;
+  font-size: 12px;
+
+  .input {
+    border-radius: 7px;
+    border: 1px solid #fff;
+    font-family: verdana;
+    font-size: 12px;
+    outline: none;
+    padding: 10px 15px;
+    width: calc(90% - 15px);
+    transition: border-color .5s;
+
+    &:focus {
+      border-color: $normal-dark;
+
+      + .label {
+        color: $normal-dark;
+      }
+    }
+  }
+
+  .label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 15px;
+    transition: top .5s, font-size .5s, opacity .5s, color .5s;
+
+    &.not-empty {
+      font-size: 7px;
+      top: -8px;
+      font-style: italic;
+    }
+  }
+}
