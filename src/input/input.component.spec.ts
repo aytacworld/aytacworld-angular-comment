@@ -28,7 +28,7 @@ describe('InputComponent', () => {
   it('should be initialized', () => {
     expect(comp.label).toBe('');
     expect(comp.validStyle).toBe(false);
-    expect(comp.fieldId).toBe('field-id-1');
+    expect(comp.fieldId).toBe('field-id-input-1');
   });
 
   it('should update inputValue', () => {

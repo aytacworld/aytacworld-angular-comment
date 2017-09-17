@@ -1,0 +1,6 @@
+<div [formGroup]="frm">
+  <c-input [label]="'Name'" formControlName="name"></c-input>
+  <c-input [label]="'Email'" formControlName="email"></c-input>
+  <c-input [label]="'Message'" [multi]="true" formControlName="message"></c-input>
+  <button class="btn" (click)="onSubmit.emit(frm.getRawValue())" [disabled]="frm.invalid">Send</button>
+</div>

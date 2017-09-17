@@ -1,4 +1,8 @@
-<div class="container">
-  <input #inp class="input" id="{{fieldId}}" type="text" required [value]="inputValue" (input)="inputChanged($event)"/>
+<div *ngIf="!multi" class="container">
+  <input #inp class="input" id="{{fieldId}}" type="text" [value]="inputValue" (input)="inputChanged($event)" />
+  <label class="label" [class.not-empty]="inp.value" for="{{fieldId}}">{{label}}</label>
+</div>
+<div *ngIf="multi" class="container">
+  <textarea #inp class="input" id="{{fieldId}}" type="text" [value]="inputValue" [rows]="rows" (input)="inputChanged($event)"></textarea>
   <label class="label" [class.not-empty]="inp.value" for="{{fieldId}}">{{label}}</label>
 </div>

@@ -17,25 +17,27 @@ let i = 0;
 export class InputComponent implements ControlValueAccessor {
   @Input() public label: string = '';
   @Input() @HostBinding('class.add-valid-style') public validStyle: boolean = false;
-  public fieldId: string = `field-id-${i++}`;
+  @Input() public multi: boolean = false;
+  @Input() public rows: number = 3;
+  public fieldId: string = `field-id-input-${i++}`;
   public inputValue: string = '';
 
   private onChange = (_: any) => { /**/ };
   private onTouched = (_: any) => { /**/ };
 
-  writeValue (value: any): void {
+  public writeValue (value: any): void {
     this.inputValue = value;
   }
 
-  registerOnChange (fn: any): void {
+  public registerOnChange (fn: any): void {
     this.onChange = fn;
   }
 
-  registerOnTouched (fn: any): void {
+  public registerOnTouched (fn: any): void {
     this.onTouched = fn;
   }
 
-  inputChanged (e: any): void {
+  public inputChanged (e: any): void {
     this.inputValue = e.target.value;
     this.onChange(this.inputValue);
   }

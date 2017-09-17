@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
-import { TextComponent } from './text/text.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
     InputComponent,
-    TextComponent
+    CommentComponent
   ],
   exports: [
     InputComponent,
-    TextComponent
+    CommentComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CommentModule { }

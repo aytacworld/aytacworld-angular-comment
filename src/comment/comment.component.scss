@@ -1,0 +1,26 @@
+@import '../shared/_variables.scss';
+
+.btn {
+  border-radius: 7px;
+  border: 1px solid $normal-dark;
+  font-family: verdana;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 15px;
+  width: calc(92% - 15px);
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color .5s, border-color .5s, color .5s;
+
+  &:disabled {
+    border-color: transparent;
+  }
+
+  &:hover {
+    background-color: $normal-dark;
+
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+}
