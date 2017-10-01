@@ -34,7 +34,7 @@ app.component.ts
 ```typescript
 @Component({
   selector: 'my-app',
-  template: `<comments></comments>`,
+  template: `<comment (onSubmit)="onSubmitClicked($event)"></comment>`,
 })
 export class App {
 }
@@ -42,9 +42,9 @@ export class App {
 
 ## Api
 
-|Input       |  Description   |  Type  |  Default  |
+|Output       |  Description   |  Type  |  Default  |
 |------------|----------------|--------|-----------|
-|input    |  desc | type | default value |
+|onSubmit    |  returns Comment object | Comment | default value |
 
 ## Test
 
@@ -52,7 +52,7 @@ export class App {
 
 ## Examples
 
-[http://embed.plnkr.co/](http://embed.plnkr.co/)
+`cd example && npm i && npm start`
 
 ## MIT License
 

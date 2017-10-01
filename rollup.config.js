@@ -8,9 +8,10 @@ export default {
     '@angular/core': 'ng.core',
     '@angular/forms': 'ng.forms',
     '@angular/common': 'ng.common',
-    'rxjs': 'rxjs'
+    'rxjs': 'rxjs',
+    'aytacworld-angular-validator': 'aw.validator'
   },
-  moduleName: 'ng.simpleForms',
+  moduleName: 'ng.comment',
   sourceMap: false,
-  external: ['@angular/core', '@angular/forms', '@angular/common', 'rxjs']
+  external: ['@angular/core', '@angular/forms', '@angular/common', 'rxjs', 'aytacworld-angular-validator']
 }

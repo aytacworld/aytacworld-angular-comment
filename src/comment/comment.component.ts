@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { email } from 'aytacworld-angular-validator';
 import { Comment } from '../shared/comment.model';
 
 @Component({
@@ -13,7 +14,7 @@ export class CommentComponent {
 
   constructor (_fb: FormBuilder) {
     this.frm = _fb.group({
-      email: '',
+      email: ['', email(true)],
       message: ['', Validators.required],
       name: ''
     });

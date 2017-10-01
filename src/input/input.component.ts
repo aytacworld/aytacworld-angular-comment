@@ -1,13 +1,16 @@
 import { Component, forwardRef, HostBinding, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
+// tslint:disable-next-line:no-use-before-declare
+const fRef = forwardRef(() => InputComponent);
+
 let i = 0;
 @Component({
   providers: [
     {
       multi: true,
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => InputComponent)
+      useExisting: fRef
     }
   ],
   selector: 'c-input',
